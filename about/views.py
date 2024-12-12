@@ -7,7 +7,16 @@ from django.contrib import messages
 # Create your views here.
 def about_me(request):
     """
-    Renders the About page
+    Renders the mosr recent information on the website author 
+    and allows user collaboration requests
+    Displays an individual instance of :model:`about.about`.
+    **Context**
+    ``about``
+        The most recent instance of :model:`about.about`.
+    ``collaborate_form``
+        An instance of :form:`about.CollaborateForm``.
+    **Templates:**
+        :template:`about/about.html`
     """
     if request.method == "POST":
              
